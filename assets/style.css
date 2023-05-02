@@ -1,0 +1,16 @@
+body {
+    background-color: lightpink;
+}
+
+button {
+    height: 200px;
+    width: 200px;
+    text-size: 50px;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+.title {
+    text-align: center;
+}
+}
