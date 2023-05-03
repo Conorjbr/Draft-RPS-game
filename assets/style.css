@@ -37,3 +37,18 @@ button {
     margin: auto;
     margin-top: 20px;
   }
+
+  .image-left {
+    float: left;
+    width: 20%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 50%;
+  }
+  .image-right {
+    float: right;
+    width: 20%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 50%;
+  }
