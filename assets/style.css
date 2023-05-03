@@ -13,4 +13,14 @@ button {
 .title {
     text-align: center;
 }
+
+i {
+    font-size:48px;
+    color:blue
 }
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
