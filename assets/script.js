@@ -53,6 +53,6 @@ function getResult() {
   resultDisplay.innerHTML = result
 }
 
-function getResult()
+//function getResult(){}
 
-function resetGame()
+//function resetGame(){}
