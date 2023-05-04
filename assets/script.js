@@ -6,6 +6,8 @@ let userChoice
 let computerChoice
 let result
 
+
+
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
   userChoice = e.target.id
   userChoiceDisplay.innerHTML = userChoice
@@ -51,15 +53,24 @@ function getResult() {
     result = 'you lose!'
   }
   resultDisplay.innerHTML = result
-
-
-
-
-
-
   
 }
 
-//function getResult(){}
+function incrementScore() {
+  var score=0 
+  var score = document.getElementById("score-box").value;
+  function scoreboard() {
+      if (result === "you win!")
+          {score= score +1}
+  
+  }
+}
+  
+
+
+
+//function incrementLose(){}
+
+//function incrementDraw(){}
 
 //function resetGame(){}
