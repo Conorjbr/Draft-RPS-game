@@ -1,7 +1,7 @@
 const computerChoiceDisplay = document.getElementById('computer-choice')
 const userChoiceDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
-const possibleChoices = document.querySelectorAll('button')
+const possibleChoices = document.querySelectorAll('.center-select')
 let userChoice
 let computerChoice
 let result
@@ -51,6 +51,13 @@ function getResult() {
     result = 'you lose!'
   }
   resultDisplay.innerHTML = result
+
+
+
+
+
+
+  
 }
 
 //function getResult(){}
