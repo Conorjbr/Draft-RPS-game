@@ -5,7 +5,8 @@ const possibleChoices = document.querySelectorAll('.center-select')
 let userChoice
 let computerChoice
 let result
-
+let userScore
+let computerScore = 0;
 
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
@@ -16,7 +17,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
 }))
 
 function generateComputerChoice() {
-  const randomNumber = Math.floor(Math.random() * 3) + 1 // or you can use possibleChoices.length
+  const randomNumber = Math.floor(Math.random() * 3) + 1 
   
   if (randomNumber === 1) {
     computerChoice = 'rock'
@@ -35,42 +36,44 @@ function getResult() {
     result = 'its a draw!'
   }
   if (computerChoice === 'rock' && userChoice === "paper") {
-    result = 'you win!'
+    result = 'you win!';
+    incrementWin();
   }
   if (computerChoice === 'rock' && userChoice === "scissors") {
-    result = 'you lost!'
+    result = 'you lost!';
+    incrementLose();
+    
   }
   if (computerChoice === 'paper' && userChoice === "scissors") {
-    result = 'you win!'
+    result = 'you win!';
+    incrementWin();  
   }
   if (computerChoice === 'paper' && userChoice === "rock") {
-    result = 'you lose!'
+    result = 'you lost!'
+    
   }
   if (computerChoice === 'scissors' && userChoice === "rock") {
-    result = 'you win!'
+    result = 'you win!';
+    incrementWin();
   }
   if (computerChoice === 'scissors' && userChoice === "paper") {
-    result = 'you lose!'
+    result = 'you lost!'
+    
   }
   resultDisplay.innerHTML = result
-  
 }
-
-function incrementScore() {
-  var score=0 
-  var score = document.getElementById("score-box").value;
-  function scoreboard() {
-      if (result === "you win!")
-          {score= score +1}
+    resultDisplay.innerHTML = result
   
+/*Takes current user score from the DOM and increments it by */
+function incrementWin(){
+      
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore;
   }
+
+  /*Takes current computer score from the DOM and increments it by */
+function incrementLose(){
+      
+  let oldScore = parseInt(document.getElementById("c-score").innerText);
+  document.getElementById("c-score").innerText = ++oldScore;
 }
-  
-
-
-
-//function incrementLose(){}
-
-//function incrementDraw(){}
-
-//function resetGame(){}
